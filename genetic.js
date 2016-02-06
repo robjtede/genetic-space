@@ -3,14 +3,18 @@ class Genetic {
 	constructor () {
 		this.initial = [1,1,1,1];
 		this.current = [this.initial];
-		this.generation = 0;
+		this._generation = 0;
 		this.siblings = 10;
-		this.mutationRate = 0.1;
+		this.mutationRate = 1;
 		this.mutationAmount = 0.5;
 	}
 	
-	generation () {
-		return this.generation;
+	get generation () {
+		return this._generation;
+	}
+	
+	set generation (val) {
+		this._generation = val;
 	}
 	
 	scores () {
